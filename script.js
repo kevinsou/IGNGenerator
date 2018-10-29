@@ -13,22 +13,25 @@ var submt = document.querySelector(".submt");
 
 
 //event listners
+
+//event of input fname
 fname.addEventListener("change", setfname);
-
+//event of input of bday
 bday.addEventListener("change", setYear);
-
+//event of input of pokemon
 char.addEventListener("click", setPokemon);
 squir.addEventListener("click", setPokemon);
 bulb.addEventListener("click", setPokemon);
-
+//event of input of sport
 football.addEventListener("click", setSport);
 basketball.addEventListener("click", setSport);
 soccor.addEventListener("click", setSport);
-
+//event of clicking the submit button
 submt.addEventListener("click", generateIgn);
 
 //functions
 
+//sets firstname
 function setfname(){
     fname.value = event.target.value;
     if (fname.value != ""){
@@ -37,11 +40,12 @@ function setfname(){
         fname.required = true;
     }
 }
-
+//sets bday year
 function setYear(){
     year = bday.value.substr(0,4);
 }
 
+//sets pokemone element
 function setPokemon(){
     if(event.target.value === "charmander"){
         element = "Fire";
@@ -55,6 +59,7 @@ function setPokemon(){
     }
 }
 
+//sets sports type
 function setSport(){
     if(event.target.value === "football"){
         type = "Charger";
@@ -68,6 +73,7 @@ function setSport(){
     }
 }
 
+//generates in game name
 function generateIgn(){
     if(!fname.required && !char.required && !football.required){
         alert(element+type+fname.value+year);
