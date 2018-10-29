@@ -11,17 +11,22 @@
 <body>
  
     <div class="outer">
-        <div class="inner">
-            <h1>Game Name Generator</h1>
-            <form id="frm">
-                FirstName : <input type="text" name="firstname" class="fname" required><br><br>
-                Year of Birth : <input type="date" name="birthday" class="bday" required><br><br>
-                Favorite Pokemon :<br> <input type="radio" name="pokemon" value="charmander" class="char" required>Charmander<br>
+        <div>
+            <span><h1>Game Name Generator</h1></span>
+            <form id="frm" class="inner">
+                <!--input first name-->
+                FirstName: <input type="text" name="firstname" class="fname" required><br><br>
+                <!--input of bday-->
+                Year of Birth: <input type="date" name="birthday" class="bday" required><br><br>
+                <!--input of pokemon-->
+                Favorite Pokemon:<br> <input type="radio" name="pokemon" value="charmander" class="char" required>Charmander<br>
                 <input type="radio" name="pokemon" value="squirtle" class="squir" >Squirtle<br>
                 <input type="radio" name="pokemon" value="bulbasaur" class="bulb">Bulbasaur<br>
-                <br>Favorite Sport : <br><input type="radio" name="sport" value="football" class="foot" required>Football<br>
+                <!--input of sport-->
+                <br>Favorite Sport: <br><input type="radio" name="sport" value="football" class="foot" required>Football<br>
                 <input type="radio" name="sport" value="basketball" class="basket">Basketball<br>
                 <input type="radio" name="sport" value="soccor" class="soccor">Soccor<br>
+                <!--submit input-->
                 <br><input type="submit" class="submt"  >
             </form>
         </div>
