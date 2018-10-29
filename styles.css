@@ -1,0 +1,25 @@
+.outer{
+    padding-top: 200px;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 1000px;
+    background-image: url("images/poke.jpg");
+}
+
+.inner{
+    font-size: 30px;
+    padding-top: 20px;
+    color: white;
+    background-image: url("images/connectwork.png");
+    text-align: left;
+    height: 800px;
+    padding-left: 50px;
+}
+
+.pokemon{
+    text-align: left;
+}
+
+h1{
+    text-align: center;
+}
