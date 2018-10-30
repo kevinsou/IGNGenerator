@@ -35,10 +35,20 @@
     max-height: 100%;
 }
 
-h1{
-    text-align: center;
+.ltr{
+    height: 100%;
+    width: 5%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-/* span{
-    background: linear-gradient(to right, red, green);
-} */
+h1{
+    text-align: center;
+    color: darkblue;
+    font: italic;
+}
+
+span{
+    background-color: aliceblue;
+    /* background: linear-gradient(to right, red, green); */
+}

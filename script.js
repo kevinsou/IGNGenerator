@@ -1,6 +1,7 @@
 var fname = document.querySelector(".fname");
 var bday = document.querySelector(".bday");
 var year ="";
+var letter = document.querySelector(".ltr");
 var char = document.querySelector(".char");
 var squir = document.querySelector(".squir");
 var bulb = document.querySelector(".bulb");
@@ -10,6 +11,7 @@ var basketball = document.querySelector(".basket");
 var soccor = document.querySelector(".soccor");
 var type = "";
 var submt = document.querySelector(".submt");
+var result = "";
 
 
 //event listners
@@ -18,6 +20,8 @@ var submt = document.querySelector(".submt");
 fname.addEventListener("change", setfname);
 //event of input of bday
 bday.addEventListener("change", setYear);
+//event to input favorite letter
+letter.addEventListener("change", setLetter);
 //event of input of pokemon
 char.addEventListener("click", setPokemon);
 squir.addEventListener("click", setPokemon);
@@ -27,7 +31,9 @@ football.addEventListener("click", setSport);
 basketball.addEventListener("click", setSport);
 soccor.addEventListener("click", setSport);
 //event of clicking the submit button
-submt.addEventListener("click", generateIgn);
+submt.addEventListener("click",generateIgn);
+
+
 
 //functions
 
@@ -42,7 +48,17 @@ function setfname(){
 }
 //sets bday year
 function setYear(){
-    year = bday.value.substr(0,4);
+    year = bday.value.substr(2,2);
+}
+
+//sets letter
+function setLetter(){
+    letter = event.target.value;
+    if (letter.value != ""){
+        letter.required = false;
+    } else{
+        letter.required = true;
+    }
 }
 
 //sets pokemone element
@@ -75,8 +91,15 @@ function setSport(){
 
 //generates in game name
 function generateIgn(){
-    if(!fname.required && !char.required && !football.required){
-        alert(element+type+fname.value+year);
+    //window.location="result.html";
+    if(!fname.required && !letter.required && !char.required && !football.required){
+        result=(letter+element+type+fname.value+year);
+        //redirect();
+        document.getElementById("frm").reset();
     }
+}
+
+function redirect(){
+    window.location.href="result.html";
 }
 
