@@ -95,6 +95,7 @@ function generateIgn(){
     if(!fname.required && !letter.required && !char.required && !football.required){
         result=(letter+element+type+fname.value+year);
         //redirect();
+        alert(result);
         document.getElementById("frm").reset();
     }
 }
